@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#D6EAF8;">
+  <h3>Weather: Current (Weather Underground)</h3>
+  <ul>
+    <li>{{ co['observation_location']['full'] }}</li>
+    <li>{{ co['observation_time'] }}</li>
+  </ul>
+  <table>
+    <tr>
+      <td><span class="blue">Weather condition</span></td>
+      <td>{{ co['weather'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Temperature</span></td>
+      <td>{{ co['temperature_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Feels like</span></td>
+      <td>{{ co['feelslike_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Humidity</span></td>
+      <td>{{ co['relative_humidity'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Dewpoint</span></td>
+      <td>{{ co['dewpoint_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Wind</span></td>
+      <td>{{ co['wind_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Windchill</span></td>
+      <td>{{ co['windchill_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Heat index</span></td>
+      <td>{{ co['heat_index_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Solar radiation</span></td>
+      <td>{{ co['solarradiation'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Ultraviolet</span></td>
+      <td>{{ co['UV'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Visibility</span></td>
+      <td>{{ co['visibility_mi'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Precipitation 1hr</span></td>
+      <td>{{ co['precip_1hr_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Precipitation today</span></td>
+      <td>{{ co['precip_today_string'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Atmospheric pressure</span></td>
+      <td>{{ co['pressure_in'] }}{{ co['pressure_trend'] }}</td>
+    </tr>
+    <tr>
+      <td><span>Soil temperature</span></td>
+      <td>{{ co['soil_temp_f'] }}</td>
+    </table>
+  </body>
+
+  <!--
+  try:
+  print(" * \033[1;34mLeaf wetness\033[0;0m: {} (0–15)\n".format(co['leaf_wetness']))
+  except KeyError:
+  pass
+-->
