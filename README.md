@@ -4,4 +4,12 @@ Using Python(language), Flask (framework) and Jinja2 (template) to get and displ
 
 ![current]
 
+## Imports
+
+```py
+from flask import Flask, flash, redirect, render_template, request
+from urllib3 import PoolManager
+import json
+```
+
 [current]: current-weather-pws.png "get current weather conditions"
