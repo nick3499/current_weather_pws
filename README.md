@@ -12,4 +12,17 @@ from urllib3 import PoolManager
 import json
 ```
 
+## Jinja2
+
+_Jinja2_ is inclusive, just as templates live in a specific directory, e.g. `/templates`. Since templates specify HTML document structure. Notice the _handlebar_ structure insertion below, e.g. `{{ co['weather'] }}`.
+
+```html
+<table>
+    <tr>
+      <td><span class="blue">Weather condition</span></td>
+      <td>{{ co['weather'] }}</td>
+    </tr>
+...
+```
+
 [current]: current-weather-pws.png "get current weather conditions"
