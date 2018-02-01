@@ -25,4 +25,25 @@ _Jinja2_ is inclusive, just as templates live in a specific directory, e.g. `/te
 ...
 ```
 
+## current_cond()
+
+The `current_cond()` method assigns a dictionary variable for insertion of URL parts.
+
+```py
+@app.route("/current/")
+def current_cond():
+    d = {'api_key': '51857b97d97c71a0',
+         'state_code': 'IL',
+         'personal_weather_station': 'pws:KILMORRI2'}
+    pm = PoolManager()
+```
+
+Values from that dictionary are spliced into the URL to `GET` raw weather data from the API.
+
+```py
+    r = pm.request('GET', 'http://api.wunderground.com/api/' +
+                   d['api_key'] + '/conditions/q/' + d['state_code'] +
+                   '/' + d['personal_weather_station'] + '.json')
+```
+
 [current]: current-weather-pws.png "get current weather conditions"
