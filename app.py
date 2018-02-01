@@ -1,5 +1,4 @@
 from flask import Flask, flash, redirect, render_template, request
-# from random import randint
 from urllib3 import PoolManager
 import json
 
@@ -11,7 +10,6 @@ def index():
 
 @app.route("/current/")
 def current_cond():
-    # URL variables --> ad8ef392afe1e78f
     d = {'api_key': '51857b97d97c71a0',
          'state_code': 'IL',
          'personal_weather_station': 'pws:KILMORRI2'}
@@ -63,10 +61,6 @@ def current_cond():
     # r.close()
     return render_template('base.html', **locals())
 
-# @app.route("/tenday/")
-# def tenday():
-#     #
-#     return render_template('base.html', **locals())
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port=5000, debug=True)
