@@ -1,6 +1,6 @@
 # Current Weather PWS
 
-Using Python(language), Flask (framework) and Jinja2 (template) to get and display current weather conditions from [WUnderground API](https://www.wunderground.com/weather/api/). From one station in WU's 250,000+ [Personal Weather Station Network](https://www.wunderground.com/weatherstation/overview.asp)
+Using **Python** (language), **Flask** (framework) and **Jinja2** (template) to `GET` and display current weather conditions from [WUnderground API](https://www.wunderground.com/weather/api/). From one station in WU's 250,000+ [Personal Weather Station Network](https://www.wunderground.com/weatherstation/overview.asp)
 
 ![current]
 
@@ -25,7 +25,7 @@ The [Anaconda Python distribution](https://anaconda.org/) was used to develop th
  * [urllib3 1.22](https://conda.anaconda.org/conda-forge/linux-64/urllib3-1.22-py36_0.tar.bz2)
  * [simplejson 3.13.2](https://pypi.python.org/pypi/simplejson/3.13.2) (PyPI)
 
-Sudden changes may not reflect the list above, since additional required modules may be overlooked.
+Sudden changes may not reflect the list above. Additional required modules may be overlooked.
 
 **NOTE**: **virtual environments** should act jointly with development environments, since operating systems use a subset of Python. Added modules may modify important dependencies which potentially corrupt the system. 
 
