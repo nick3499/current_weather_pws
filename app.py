@@ -58,7 +58,7 @@ def current_cond():
         print(" * \033[1;34mLeaf wetness\033[0;0m: {} (0–15)\n".format(co['leaf_wetness']))
     except KeyError:
         pass
-    # r.close()
+    r.close()
     return render_template('base.html', **locals())
 
 
