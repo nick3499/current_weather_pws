@@ -63,4 +63,15 @@ Values from that dictionary are spliced into the URL to `GET` raw weather data f
                    '/' + d['personal_weather_station'] + '.json')
 ```
 
+## Try/Except Block
+
+Sometimes `leaf_wetness` data is omitted, which causes a `KeyError`, so the following try/except block was added.
+
+```py
+try:
+   lw = co['leaf_wetness']
+except KeyError:
+   pass
+```
+
 [screen-capture]: screen-capture.png "screen capture"
